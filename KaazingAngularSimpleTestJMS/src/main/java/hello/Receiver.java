@@ -35,6 +35,9 @@ public class Receiver {
     @JmsListener(destination = Constants.SND_Topic, containerFactory = "myJmsContainerFactory")
     public void receiveMessage(final String message) {
     	System.out.println("Received a new message: "+message);
+    	
+    	// TODO: Add any database update code here! 
+    	
         // Send a message
         MessageCreator messageCreator = new MessageCreator() {
             @Override
